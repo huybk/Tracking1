@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title>Tracking Geolocation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="leaflet/leaflet.css" />
+<link rel="stylesheet" href="leaflet-gps.css" />
+<link rel="stylesheet" href="demos/style.css" />
+<link rel="stylesheet" type="text/css" href="leaflet.usermarker.css">
+</head>
+
+<body>
+<div id="map"></div>
+<script src="leaflet/leaflet.js"></script>
+<script src="leaflet-gps.js"></script>
+<script type="text/javascript" src="leaflet.usermarker.js"></script>
+<script>
+
+	var map = new L.Map('map', {zoom: 17, center: new L.latLng([10.772076,106.657687]) });
+
+	map.addLayer(new L.TileLayer('http://{s}.tile2.opencyclemap.org/transport/{z}/{x}/{y}.png'));	//base layer
+
+	map.addControl( new L.Control.Gps({autoActive: true, autoTracking: true, marker: new L.UserMarker([0,0])}) );//inizialize control
+</script>
+</body>
+</html>
