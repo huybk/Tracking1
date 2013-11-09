@@ -6,7 +6,7 @@
         id        = "com.actsone.booheart"
         version   = "1.0.0">
 
-    <name>TrackingGPS</name>
+    <name>Tracking</name>
 
     <description>
         Phonegap api testing app.
